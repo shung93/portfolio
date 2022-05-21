@@ -1,51 +1,27 @@
 import styled from "styled-components";
-import { colors, fontSizes, spacing } from "../_base/_settings.style";
-
-export const SkillStyle = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin: ${spacing.large} ${spacing.medium} ${spacing.none} ${spacing.medium};
-
-`;
-
-// export const SkillTitleStyle = styled.h1`
-//     font-size: ${fontSizes.xLarge};
-//     text-indent: -0.5rem;
-//     margin: 0;
-//     color: ${colors.lightBlack};
-//     opacity: .95;
-// `;
-
-// export const SkillListStyle = styled.ul`
-//     display: flex;
-//     gap: 20px;
-//     // justify-content: space-between;
-//     list-style-type: none;
-//     padding: 0;
-//     margin: 0;
-//     font-size: ${fontSizes.small};
-//     opacity: .9;
-// `;
+import { fontSizes, spacing } from "../_base/_settings.style";
+import { colors } from "../_base/_settingColors.style";
 
 export const SkillStyleInner = styled.div`
-    margin-top: ${spacing.small};
-
-    h1 {
-        font-size: ${fontSizes.xLarge};
-        margin: 0;
-        color: ${colors.lightBlack};
-        text-align: right;
-        font-weight: 300;
-    }
+    margin-top: ${spacing.small}rem;
+    text-align: right;
 
     ul {
         display: flex;
         gap: 20px;
-        // justify-content: space-between;
         list-style-type: none;
-        padding: 0;
+        padding: ${spacing.xSmall}rem ${spacing.xSmall}rem ${spacing.none}rem 5rem;
         margin: 0;
-        font-size: ${fontSizes.medium};
+        font-size: ${fontSizes.base}rem;
         float: right;
+        position: relative;
+        bottom: ${spacing.medium}rem;
+        right: ${spacing.xSmall}rem;
+        background: ${colors.lightBlack};
+        color: ${colors.notWhite};
+    }
+
+    li {
+        z-index: 1;
     }
 `

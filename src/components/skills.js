@@ -1,6 +1,7 @@
 import {graphql, useStaticQuery} from 'gatsby';
 import React from 'react';
-import { SkillStyle, SkillStyleInner } from '../styles/_components/_skills.style';
+import { SkillStyleInner } from '../styles/_components/_skills.style';
+import { SectionTitleStyle, SectionStyle } from '../styles/_components/_sections.style';
 
 const Skills = () => {
     const data = useStaticQuery(graphql`
@@ -17,22 +18,24 @@ const Skills = () => {
     `);
 
     return (
-        <SkillStyle>
+        <SectionStyle>
             {
                 data.allContentfulPortfolioSkills.edges.map(
                     (edge) => {
                         return (
                             <SkillStyleInner>
-                                <h1>{edge.node.skillType.toLowerCase()}</h1>
+                                <SectionTitleStyle>
+                                    <h1>{edge.node.skillType.toLowerCase()}</h1>
+                                </SectionTitleStyle>
                                 <ul>
-                                    {edge.node.skillName.map((skill) => <li>{skill}</li>)}
+                                    {edge.node.skillName.map((skill) => <li>{skill.toUpperCase()}</li>)}
                                 </ul>
                             </SkillStyleInner>
                         )
                     }
                 )
             }
-        </SkillStyle>
+        </SectionStyle>
     )
 };
 

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { colors } from "./_base/_settings.style";
+import { colors } from "./_base/_settingColors.style";
 
 export const GlobalStyle = createGlobalStyle`
     html {
@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
         background: ${colors.lightLavendar};
-        color: ${colors.black}
+        color: ${colors.black};
+        overflow-x: hidden;
     }
 `

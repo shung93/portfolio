@@ -1,30 +1,27 @@
-export const colors = {
-    black: '#322F37',
-    lightBlack: '#3C3842',
-    darkLavendar: '#504D56',
-    medLavendar: '#C9BBC1',
-    lightLavendar: '#E4DDE0',
-    // notWhite: '#E7E4E6',
-    notWhite: '#EDE9EB',
-    white: '#F6F4F5',
+export const fontSizes = {
+    xxSmall: 0.5,
+    xSmall: 0.7,
+    small: 0.9,
+    base: 1.0,
+    medium: 1.1,
+    large: 1.3,
+    xLarge: 1.6,
+    xxLarge: 1.8,
 };
 
-export const fontSizes = {
-    xxSmall: '0.7rem',
-    xSmall: '0.8rem',
-    small: '0.9rem',
-    medium: '1.2rem',
-    large: '6.6rem',
-    xLarge: '7.0rem',
-    xxLarge: '9.0rem'
-};
+export const headingFontSizes = {
+    small: 5.0,
+    medium: 7.0,
+    large: 10.0,
+    xLarge: 12.0,
+}
 
 export const spacing = {
-    none: '0rem',
-    xSmall: '0.6rem',
-    small: '1.0rem',
-    medium: '1.4rem',
-    large: '8.0rem',
-    xLarge: '10.0rem',
-    xxLarge: '23rem',
+    none: 0.0,
+    xxSmall: 0.2,
+    xSmall: 0.4,
+    small: 1.0,
+    medium: 1.4,
+    large: 1.8,
+    xxLarge: 8.0,
 };

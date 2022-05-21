@@ -10,7 +10,7 @@
   "scripts": {
     "develop": "cross-env GATSBY_GRAPHQL_IDE=playground ENABLE_GATSBY_REFRESH_ENDPOINT=true gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "cross-env GATSBY_GRAPHQL_IDE=playground ENABLE_GATSBY_REFRESH_ENDPOINT=true gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },

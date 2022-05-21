@@ -4,19 +4,17 @@ import { HeaderStyle, HeaderTitle, HeaderNav } from '../../styles/_layout/_heade
 
 const Header = () => {
     return (
-        <div>
-            <HeaderStyle>
-                <HeaderTitle>sam h.</HeaderTitle>
-                <HeaderNav>
-                    <li>
-                        <Link>about</Link>
-                    </li>
-                    <li>
-                        <Link>contact</Link>
-                    </li>
-                </HeaderNav>
-            </HeaderStyle>
-        </div>
+        <HeaderStyle>
+            <HeaderTitle>sam h.</HeaderTitle>
+            <HeaderNav>
+                <li>
+                    <Link>about</Link>
+                </li>
+                <li>
+                    <Link>contact</Link>
+                </li>
+            </HeaderNav>
+        </HeaderStyle>
     )
 };
 
