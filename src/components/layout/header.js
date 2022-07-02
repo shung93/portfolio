@@ -8,10 +8,7 @@ const Header = () => {
             <HeaderTitle>sam h.</HeaderTitle>
             <HeaderNav>
                 <li>
-                    <Link>about</Link>
-                </li>
-                <li>
-                    <Link>contact</Link>
+                    <Link to="/contact">contact</Link>
                 </li>
             </HeaderNav>
         </HeaderStyle>

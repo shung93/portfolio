@@ -1,10 +1,13 @@
 import {graphql, useStaticQuery} from 'gatsby';
-import React from 'react';
+import React, {useState} from 'react';
 import sanitizeHtml from 'sanitize-html-react';
-import { ExperienceStyle, ExperienceStyleDetails, ExperienceStyleHeader } from '../styles/_components/_experience.style';
+import { ExperienceContainer, ExperienceStyle, ExperienceStyleDetails, ExperienceStyleHeader } from '../styles/_components/_experience.style';
 import { SectionTitleStyle, SectionStyle } from '../styles/_components/_sections.style';
 
+
 const Experience = () => {
+    const [show, setShow] = useState(false);
+    
     const data = useStaticQuery(graphql`
         query {
             allContentfulPortfolioCompanyName (
@@ -57,8 +60,9 @@ const Experience = () => {
         <SectionStyle>
             <SectionTitleStyle>
                 <h1>work</h1>
-                <h1>.01</h1>
+                <h1>01</h1>
             </SectionTitleStyle>
+            <ExperienceContainer>
             {
                 data.allContentfulPortfolioCompanyName.edges.map(
                     (edge) => {
@@ -73,35 +77,48 @@ const Experience = () => {
                                         (entry) => {
                                             return (
                                                 <ExperienceStyleDetails>
-                                                    <div class='detail-header'>
+                                                    <div>
                                                         <h3>{entry.jobTitle}</h3>
-                                                        <p>
-                                                            {
-                                                                getMonthDate(entry.positionStartDate, 'month')
-                                                            } {
-                                                                getMonthDate(entry.positionStartDate, 'year').substring(2)
-                                                            }' - {
-                                                                getMonthDate(entry.positionEndDate, 'month')
-                                                                } {
-                                                                getMonthDate(entry.positionEndDate, 'year').substring(2)
-                                                                }'
-                                                        </p>
+                                                        <div className='detail-header'>
+                                                            <p>
+                                                                {
+                                                                    getMonthDate(entry.positionStartDate, 'month')
+                                                                } '{
+                                                                    getMonthDate(entry.positionStartDate, 'year').substring(2)
+                                                                } - {
+                                                                    getMonthDate(entry.positionEndDate, 'month')
+                                                                    } '{
+                                                                    getMonthDate(entry.positionEndDate, 'year').substring(2)
+                                                                    }
+                                                            </p>
+                                                            <p className="location">
+                                                                {
+                                                                    entry.country ? entry.country : 
+                                                                        entry.city ? entry.city + ", " + entry.country : null
+                                                                }
+                                                            </p>
+                                                        </div>
+                                                        <button 
+                                                            className="detail-button"   
+                                                            onClick={() => setShow(!show)}
+                                                        >
+                                                            details +
+                                                        </button>
                                                     </div>
-                                                    <p class="location">
-                                                        {
-                                                            entry.country ? entry.country : 
-                                                                entry.city ? entry.city + ", " + entry.country : null
-                                                        }
-                                                    </p>
-                                                    <div
-                                                        dangerouslySetInnerHTML={
-                                                            {
-                                                            __html: sanitizeHtml(
-                                                                        entry.positionDescription.childMarkdownRemark.html
-                                                                        )
+                                                    {
+                                                        show ? 
+                                                            <div
+                                                            className='detail-description'
+                                                            dangerouslySetInnerHTML={
+                                                                {
+                                                                __html: sanitizeHtml(
+                                                                            entry.positionDescription.childMarkdownRemark.html
+                                                                            )
+                                                                }
                                                             }
-                                                        }
-                                                    />
+                                                            />
+                                                        : null
+                                                    }
                                                 </ExperienceStyleDetails>
                                             )
                                         }
@@ -112,6 +129,7 @@ const Experience = () => {
                     }
                 )
             }
+            </ExperienceContainer>
         </SectionStyle>
     )
 };

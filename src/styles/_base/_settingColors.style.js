@@ -1,8 +1,8 @@
 export const colors = {
-    black: '#322F37',
-    lightBlack: '#3C3842',
-    darkLavendar: '#504D56',
-    medLavendar: '#6E6977',
+    black: '#1E1C21',
+    lightBlack: '#46424D',
+    darkLavendar: '#5A5463',
+    medLavendar: '#827B8E',
     lightLavendar: '#E4DDE0',
     notWhite: '#EDE9EB',
     white: '#ECECEC',

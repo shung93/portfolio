@@ -16,13 +16,17 @@ export const IntroBgText = styled.div`
     font-size: calc(${headingFontSizes.xLarge}vw + 0.5em);
     line-height: 85%;
     color: ${colors.notWhite};
-    opacity: 0.4;
+    opacity: 0.6;
     pointer-events: none;
     text-align: right;
 
     @media screen and (min-width: ${mediaSizes.desktop}) {
+        font-size: calc(${headingFontSizes.xLarge}vw + 0.5em);
+    };
+
+    @media screen and (min-width: ${mediaSizes.phone}) {
         font-size: calc(${headingFontSizes.large}vw + 0.5em);
-    }
+    };
 `
 
 export const IntroTitleStyle = styled.h1`

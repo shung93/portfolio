@@ -16,9 +16,9 @@ const IndexPage = () => {
         <title></title>
         <IntroStyle>
           <IntroBgText>
-            united kingdom<br></br>
-            washington<br></br>
-            new york<br></br>
+            united kingdom.<br></br>
+            washington.<br></br>
+            new york.<br></br>
           </IntroBgText>
           <IntroTitleStyle>
             hihi welcome.

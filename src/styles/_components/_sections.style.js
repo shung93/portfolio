@@ -6,14 +6,14 @@ export const SectionTitleStyle = styled.div`
     display: flex;
     justify-content: space-between;
     width: auto;
-    border-bottom: 2px solid ${colors.notWhite};
+    border-bottom: 3px solid ${colors.lightBlack};
     
 
     h1 {
         z-index: -1;
         margin: 0;
         font-size: ${headingFontSizes.large}rem;
-        color: ${colors.notWhite};
+        color: ${colors.lightBlack};
         font-weight: 300;
         line-height: 90%;
     }
