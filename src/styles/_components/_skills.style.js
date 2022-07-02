@@ -4,24 +4,23 @@ import { colors } from "../_base/_settingColors.style";
 
 export const SkillStyleInner = styled.div`
     margin-top: ${spacing.small}rem;
-    text-align: right;
+    // text-align: right;
+`
 
+export const SkillsList = styled.div`
+    margin-top: ${spacing.small}rem;
+    
     ul {
         display: flex;
-        gap: 20px;
-        list-style-type: none;
-        padding: ${spacing.xSmall}rem ${spacing.xSmall}rem ${spacing.none}rem 5rem;
+        flex-direction: column;
+        gap: ${spacing.small}rem;
         margin: 0;
-        font-size: ${fontSizes.base}rem;
-        float: right;
-        position: relative;
-        bottom: ${spacing.medium}rem;
-        right: ${spacing.xSmall}rem;
-        background: ${colors.lightBlack};
-        color: ${colors.notWhite};
+        padding-left: ${spacing.xSmall}rem;
+        font-size: ${fontSizes.small}rem;
+        color: ${colors.lightBlack};
     }
 
     li {
-        z-index: 1;
+        list-style: none;
     }
 `

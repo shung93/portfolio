@@ -4,9 +4,17 @@ import sanitizeHtml from 'sanitize-html-react';
 import { ExperienceContainer, ExperienceStyle, ExperienceStyleDetails, ExperienceStyleHeader } from '../styles/_components/_experience.style';
 import { SectionTitleStyle, SectionStyle } from '../styles/_components/_sections.style';
 
+const detailText = 'show details +';
 
 const Experience = () => {
     const [show, setShow] = useState(false);
+    const [animation, setAnimation] = useState(false);
+
+    const showHide = async(ms) => {
+        setAnimation(!animation)
+        await new Promise(r => setTimeout(r, ms))
+        setShow(!show)
+    }
     
     const data = useStaticQuery(graphql`
         query {
@@ -62,6 +70,12 @@ const Experience = () => {
                 <h1>work</h1>
                 <h1>01</h1>
             </SectionTitleStyle>
+            <button 
+                className="detail-button"   
+                onClick={() => showHide(500)}
+            >
+                {detailText}
+            </button>
             <ExperienceContainer>
             {
                 data.allContentfulPortfolioCompanyName.edges.map(
@@ -98,17 +112,11 @@ const Experience = () => {
                                                                 }
                                                             </p>
                                                         </div>
-                                                        <button 
-                                                            className="detail-button"   
-                                                            onClick={() => setShow(!show)}
-                                                        >
-                                                            details +
-                                                        </button>
                                                     </div>
                                                     {
                                                         show ? 
                                                             <div
-                                                            className='detail-description'
+                                                            className={`detail-description ${animation}`}
                                                             dangerouslySetInnerHTML={
                                                                 {
                                                                 __html: sanitizeHtml(

@@ -10,6 +10,7 @@ const thinBorder = `1px solid ${colors.lightBlack}`;
 const thickBorder = `2px solid ${colors.lightBlack}`;
 
 export const ExperienceContainer = styled.div`
+    border-bottom: 1px solid ${colors.lightBlack};
     margin-top: ${containerTopMargin};
     width: ${containerWidth};
     h1 {
@@ -30,16 +31,16 @@ export const ExperienceContainer = styled.div`
         font-weight: 300;
     }
 
-    button, p {
+    p {
         font-size: ${fontSizes.xxSmall}rem;
-        color: ${colors.lightBlack};
+        color: ${colors.darkLavendar};
     }
 
     ul {
         margin-top: ${sectionTopMargin};
         font-size: ${fontSizes.xxSmall}rem;
         padding-left: ${spacing.xSmall}rem;
-        color: ${colors.darkLavendar};
+        color: ${colors.lightBlack};
     }
 
     li {
@@ -91,24 +92,6 @@ export const ExperienceStyleDetails = styled.div`
         margin: 0;
         margin-bottom: ${sectionBottomMargin};
     }
-    
-    .detail-button {
-        margin-top: ${sectionTopMargin};
-        padding: 0;
-        outline: none;
-        background: transparent;
-        border: 1px solid transparent;
-        cursor: pointer;
-        transition-duration: 0.2s;
-
-        p {
-            margin-bottom: 0;
-        }
-    }
-
-    .detail-button:hover {
-        color: ${colors.medLavendar};
-    }
 
     .detail-header {
         display: flex;
@@ -119,6 +102,23 @@ export const ExperienceStyleDetails = styled.div`
     .detail-description {
         margin-top: 0;
         font-size: ${fontSizes.xSmall}rem;
-        color: ${colors.lightBlack};
+    }
+
+    .detail-description.true {
+        animation: fadeIn 0.5s;
+    }
+
+    .detail-description.false {
+        animation: fadeOut 0.5s;
+    }
+
+    @keyframes fadeIn{
+        0%    {opacity: 0;}
+        100%  {opacity: 1;}
+    }
+
+    @keyframes fadeOut{
+        0%    {opacity: 1;}
+        100%  {opacity: 0;}
     }
 `

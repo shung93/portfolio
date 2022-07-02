@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { headingFontSizes, spacing } from "../_base/_settings.style";
+import { fontSizes, headingFontSizes, spacing } from "../_base/_settings.style";
 import { colors } from "../_base/_settingColors.style";
 
 export const SectionTitleStyle = styled.div`
@@ -8,7 +8,6 @@ export const SectionTitleStyle = styled.div`
     width: auto;
     border-bottom: 3px solid ${colors.lightBlack};
     
-
     h1 {
         z-index: -1;
         margin: 0;
@@ -27,4 +26,21 @@ export const SectionStyle = styled.div`
     display: flex;
     flex-direction: column;
     margin: ${spacing.xxLarge}rem ${spacing.medium}rem ${spacing.none}rem ${spacing.medium}rem;
+        
+    .detail-button {
+        margin-top: ${spacing.xSmall}rem;
+        padding: 0;
+        background: transparent;
+        border: 1px solid transparent;
+        color: ${colors.lightBlack};
+        cursor: pointer;
+        outline: none;
+        transition-duration: 0.2s;
+        text-align: left;
+        width: fit-content;
+    }
+
+    .detail-button:hover {
+        color: ${colors.medLavendar};
+    }
 `;

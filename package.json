@@ -29,6 +29,7 @@
     "graphql-playground-middleware-express": "^1.7.23",
     "moment": "^2.29.3",
     "react": "^17.0.1",
+    "react-animated-css": "^1.2.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "sanitize-html-react": "^1.13.0",
