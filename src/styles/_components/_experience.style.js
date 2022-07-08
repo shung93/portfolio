@@ -6,7 +6,7 @@ const containerWidth = `${viewWidths.forty}vw`;
 const containerTopMargin = `${spacing.medium}rem`;
 const sectionTopMargin = `${spacing.xSmall}rem`;
 const sectionBottomMargin = `${spacing.xxSmall}rem`;
-const thinBorder = `1px solid ${colors.lightBlack}`;
+const thinBorder = `0.75px solid ${colors.lightBlack}`;
 const thickBorder = `2px solid ${colors.lightBlack}`;
 
 export const ExperienceContainer = styled.div`
@@ -104,21 +104,8 @@ export const ExperienceStyleDetails = styled.div`
         font-size: ${fontSizes.xSmall}rem;
     }
 
-    .detail-description.true {
-        animation: fadeIn 0.5s;
-    }
-
-    .detail-description.false {
-        animation: fadeOut 0.5s;
-    }
-
-    @keyframes fadeIn{
-        0%    {opacity: 0;}
-        100%  {opacity: 1;}
-    }
-
-    @keyframes fadeOut{
-        0%    {opacity: 1;}
-        100%  {opacity: 0;}
+    .content {
+        overflow: hidden;
+        transition: height ease 0.2s;
     }
 `
