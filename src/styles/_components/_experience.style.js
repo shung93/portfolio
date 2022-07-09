@@ -6,8 +6,8 @@ const containerWidth = `${viewWidths.forty}vw`;
 const containerTopMargin = `${spacing.medium}rem`;
 const sectionTopMargin = `${spacing.xSmall}rem`;
 const sectionBottomMargin = `${spacing.xxSmall}rem`;
-const thinBorder = `0.75px solid ${colors.lightBlack}`;
-const thickBorder = `2px solid ${colors.lightBlack}`;
+const thinBorder = `0.75px solid ${colors.medGray}`;
+const thickBorder = `2px solid ${colors.medGray}`;
 
 export const ExperienceStyle = styled.div`
     margin-top: ${containerTopMargin};
@@ -18,37 +18,37 @@ export const ExperienceStyle = styled.div`
 `
 
 export const ExperienceContainer = styled.div`
-    border-bottom: 1px solid ${colors.lightBlack};
+    border-bottom: ${thinBorder};
     margin-top: ${containerTopMargin};
     width: ${containerWidth};
     h1 {
         font-weight: 300;
         font-size: ${fontSizes.xLarge}rem;
-        color: ${colors.lightBlack};
+        color: ${colors.gray};
     }
     
     h2 {
         font-weight: 300;
         font-size: ${fontSizes.xSmall}rem;
-        color: ${colors.medLavendar};
+        color: ${colors.medGray};
     }
 
     h3 {
         font-size: ${fontSizes.medium}rem;
-        color: ${colors.black};
+        color: ${colors.lightGray};
         font-weight: 300;
     }
 
     p {
         font-size: ${fontSizes.xxSmall}rem;
-        color: ${colors.darkLavendar};
+        color: ${colors.medGray};
     }
 
     ul {
         margin-top: ${sectionTopMargin};
         font-size: ${fontSizes.xxSmall}rem;
         padding-left: ${spacing.xSmall}rem;
-        color: ${colors.lightBlack};
+        color: ${colors.lightGray};
     }
 
     li {
@@ -101,39 +101,64 @@ export const ExperienceStyleDetails = styled.div`
 
     .detail {
         overflow: hidden;
-        transition: height ease 0.2s;
+        transition: height ease 0.4s;
     }
 
     .detail-show {
-        animation: fadeIn 0.3s; 
-        -webkit-animation: fadeIn 0.3s; 
-        -moz-animation: fadeIn 0.3s; 
-        -o-animation: fadeIn 0.3s; 
-        -ms-animation: fadeIn 0.3s; 
-        }
+        animation: fadeIn 0.2s;
+        -webkit-animation: fadeIn 0.2s;
+        -moz-animation: fadeIn 0.2s;
+        -o-animation: fadeIn 0.2s;
+        -ms-animation: fadeIn 0.2s;
+    }
 
-        @keyframes fadeIn {
+    @keyframes fadeIn {
         0% { opacity: 0; }
         100% { opacity: 1; }
-        }
-
-        @-moz-keyframes fadeIn {
+    }
+    @-moz-keyframes fadeIn {
         0% { opacity: 0; }
         100% { opacity: 1; }
-        }
-
-        @-webkit-keyframes fadeIn {
+    }
+    @-webkit-keyframes fadeIn {
         0% { opacity: 0; }
         100% { opacity: 1; }
-        }
-
-        @-o-keyframes fadeIn {
+    }
+    @-o-keyframes fadeIn {
         0% { opacity: 0; }
         100% { opacity: 1; }
-        }
-
-        @-ms-keyframes fadeIn {
+    }
+    @-ms-keyframes fadeIn {
         0% { opacity: 0; }
         100% { opacity: 1; }
-        }
+    }
+
+    .detail-noshow {
+        animation: fadeOut 0.6s;
+        -webkit-animation: fadeOut 0.6s;
+        -moz-animation: fadeOut 0.6s;
+        -o-animation: fadeOut 0.6s;
+        -ms-animation: fadeOut 0.6s;
+    }
+
+    @keyframes fadeOut {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+    @-moz-keyframes fadeOut {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+    @-webkit-keyframes fadeOut {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+    @-o-keyframes fadeOut {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+    @-ms-keyframes fadeOut {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+    }
 `

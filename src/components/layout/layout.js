@@ -6,11 +6,13 @@ import { LayoutStyle } from '../../styles/_layout/_layout.style';
 const Layout = (props) => {
 
     return (
+        
         <LayoutStyle>
             <Header/>
-                {props.children}
+            {props.children}
             <Footer/>
         </LayoutStyle>
+        
     )
 };
 

@@ -22,4 +22,9 @@ export const HeaderNav = styled.nav`
     list-style-type: none;
     margin-top: ${spacing.medium}rem;
     gap: ${spacing.xSmall}rem;
+
+    a:visited {
+        textDecoration: 'none';
+        color: ${colors.lightBlack};
+    }
 `;

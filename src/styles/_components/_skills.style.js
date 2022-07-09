@@ -17,7 +17,7 @@ export const SkillsList = styled.div`
         margin: 0;
         padding-left: ${spacing.xSmall}rem;
         font-size: ${fontSizes.small}rem;
-        color: ${colors.lightBlack};
+        color: ${colors.lightGray};
     }
 
     li {
