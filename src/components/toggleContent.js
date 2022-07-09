@@ -5,7 +5,7 @@ const ToggleContent = ({ children , showState}) => {
     
     return (
         <div 
-            className="content"
+            className="detail"
             ref={childRef}
             style={
                     showState ? {

@@ -116,6 +116,7 @@ const Experience = () => {
                                                     <ToggleContent showState={show}>
                                                         {
                                                             <div
+                                                                className={show ? "detail-show" : "detail-noshow"}
                                                                 dangerouslySetInnerHTML={
                                                                     {
                                                                     __html: sanitizeHtml(

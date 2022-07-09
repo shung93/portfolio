@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import Experience from '../components/experience';
 import Layout from '../components/layout/layout';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Skills from '../components/skills';
 import { IntroBgText, 
         IntroStyle, 
@@ -13,22 +14,23 @@ const IndexPage = () => {
     <>
       <GlobalStyle/>
       <Layout>
-        <title></title>
         <IntroStyle>
           <IntroBgText>
-            united kingdom.<br></br>
-            washington.<br></br>
-            new york.<br></br>
+                united kingdom.<br></br>
+                washington.<br></br>
+                new york.<br></br>
           </IntroBgText>
-          <IntroTitleStyle>
-            hihi welcome.
-          </IntroTitleStyle>
-          <IntroSubStyle>
-            just a data boy, living in a data world.
-          </IntroSubStyle>
-          <IntroSubStyle>
-            currently based out of the United Kingdom.
-          </IntroSubStyle> 
+          <div class="bottom">
+            <IntroTitleStyle>
+              hihi welcome.
+            </IntroTitleStyle>
+            <IntroSubStyle>
+              just a data boy, living in a data world.
+            </IntroSubStyle>
+            <IntroSubStyle>
+              currently based out of the United Kingdom.
+            </IntroSubStyle> 
+          </div>
         </IntroStyle>
         <Experience/>
         <Skills/>

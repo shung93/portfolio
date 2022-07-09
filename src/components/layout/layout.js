@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import Header from './header';
 import Footer from './footer';
+import { LayoutStyle } from '../../styles/_layout/_layout.style';
 
 const Layout = (props) => {
+
     return (
-        <div style={{ overflow: "hidden" }}>
+        <LayoutStyle>
             <Header/>
-            {props.children}
+                {props.children}
             <Footer/>
-        </div>
+        </LayoutStyle>
     )
 };
 

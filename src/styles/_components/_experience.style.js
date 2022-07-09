@@ -9,6 +9,14 @@ const sectionBottomMargin = `${spacing.xxSmall}rem`;
 const thinBorder = `0.75px solid ${colors.lightBlack}`;
 const thickBorder = `2px solid ${colors.lightBlack}`;
 
+export const ExperienceStyle = styled.div`
+    margin-top: ${containerTopMargin};
+
+    h1 {
+        margin: 0;
+    }
+`
+
 export const ExperienceContainer = styled.div`
     border-bottom: 1px solid ${colors.lightBlack};
     margin-top: ${containerTopMargin};
@@ -54,14 +62,6 @@ export const ExperienceContainer = styled.div`
     }
 `
 
-export const ExperienceStyle = styled.div`
-    margin-top: ${containerTopMargin};
-
-    h1 {
-        margin: 0;
-    }
-`
-
 export const ExperienceStyleHeader = styled.div`
     margin-bottom: ${spacing.xLarge}rem;
     display: flex;
@@ -79,7 +79,7 @@ export const ExperienceStyleHeader = styled.div`
 
 export const ExperienceStyleDetails = styled.div`
     margin-top: 0;
-    margin-bottom: ${spacing.large}rem;
+    border-bottom: ${spacing.large}rem solid rgba(255,255,255,0);
     width: ${containerWidth};
     border-top: ${thinBorder};
 
@@ -98,14 +98,42 @@ export const ExperienceStyleDetails = styled.div`
         align-items: center;
         justify-content: space-between;
     }
-    
-    .detail-description {
-        margin-top: 0;
-        font-size: ${fontSizes.xSmall}rem;
-    }
 
-    .content {
+    .detail {
         overflow: hidden;
         transition: height ease 0.2s;
     }
+
+    .detail-show {
+        animation: fadeIn 0.3s; 
+        -webkit-animation: fadeIn 0.3s; 
+        -moz-animation: fadeIn 0.3s; 
+        -o-animation: fadeIn 0.3s; 
+        -ms-animation: fadeIn 0.3s; 
+        }
+
+        @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+        }
+
+        @-moz-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+        }
+
+        @-webkit-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+        }
+
+        @-o-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+        }
+
+        @-ms-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+        }
 `

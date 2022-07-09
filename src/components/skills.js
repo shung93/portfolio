@@ -18,26 +18,31 @@ const Skills = () => {
     `);
 
     return (
-        <SectionStyle>
+        <>
             {
                 data.allContentfulPortfolioSkills.edges.map(
-                    (edge) => {
+                    (edge, index) => {
+                        const idx = (index + 2).toString().padStart(2, '0')
+
                         return (
-                            <SkillStyleInner>
-                                <SectionTitleStyle>
-                                    <h1>{edge.node.skillType.toLowerCase()}</h1>
-                                </SectionTitleStyle>
-                                <SkillsList>
-                                    <ul>
-                                        {edge.node.skillName.map((skill) => <li>{skill.toUpperCase()}</li>)}
-                                    </ul>
-                                </SkillsList>
-                            </SkillStyleInner>
+                            <SectionStyle>
+                                <SkillStyleInner>
+                                    <SectionTitleStyle>
+                                        <h1>{edge.node.skillType.toLowerCase()}</h1>
+                                        <h1>{idx}</h1>
+                                    </SectionTitleStyle>
+                                    <SkillsList>
+                                        <ul>
+                                            {edge.node.skillName.map((skill) => <li>{skill.toUpperCase()}</li>)}
+                                        </ul>
+                                    </SkillsList>
+                                </SkillStyleInner>
+                            </SectionStyle>
                         )
                     }
                 )
             }
-        </SectionStyle>
+        </>
     )
 };
 

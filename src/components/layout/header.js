@@ -2,7 +2,7 @@ import {Link} from 'gatsby';
 import React from 'react';
 import { HeaderStyle, HeaderTitle, HeaderNav } from '../../styles/_layout/_header.style';
 
-const Header = () => {
+const Header = (ref) => {
     return (
         <HeaderStyle>
             <HeaderTitle>sam h.</HeaderTitle>
