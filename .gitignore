@@ -2,4 +2,19 @@ node_modules/
 .cache/
 public
 .env.development
+.env.production
+*.env
 *.DS_Store
+
+!jest.config.js
+!.eslintrc.js
+!prettier.config.js
+*.d.ts
+!ambient.d.ts
+node_modules
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+
+cdk-outputs.json
