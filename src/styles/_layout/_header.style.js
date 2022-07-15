@@ -1,29 +1,42 @@
 import styled from "styled-components";
 import { fontSizes, spacing } from "../_base/_settings.style";
 import { colors } from "../_base/_settingColors.style";
+import { FadeInUp, FadeIn } from "../_base/_settingsAnimations.style";
 
-// const headerSpacing = `${spacing.medium}rem ${spacing.none}rem ${spacing.xSmall}rem ${spacing.none}rem`;
+
 export const HeaderStyle = styled.div`
     display: flex;
     justify-content: space-between;
-    margin-left: ${spacing.medium}rem;
-    margin-right: ${spacing.medium}rem;
     font-size: ${fontSizes.xSmall}rem;
     border-bottom: 1px solid ${colors.lightBlack};
-`;
+    ${FadeIn({
+        nm: 'nav-border-fadein',
+        duration: 1, 
+        distance: 10,
+    })};
 
-export const HeaderTitle = styled.p`
-    margin-top: ${spacing.medium}rem;
+    p {
+        margin-top: ${spacing.small}rem;
+        margin-bottom: ${spacing.small}rem;
+    }
+
+    .content {
+        ${FadeInUp({
+            nm:'navbar-fadein', 
+            duration:1, 
+            distance:10,
+        })};
+    }
 `;
 
 export const HeaderNav = styled.nav`
     display: flex;
     justify-content: space-between;    
     list-style-type: none;
-    margin-top: ${spacing.medium}rem;
-    gap: ${spacing.xSmall}rem;
+    margin-top: ${spacing.small}rem;
+    margin-bottom: ${spacing.small}rem;
 
-    a:visited {
+    a {
         textDecoration: 'none';
         color: ${colors.lightBlack};
     }

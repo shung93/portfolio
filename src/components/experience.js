@@ -1,18 +1,26 @@
 import {graphql, useStaticQuery} from 'gatsby';
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import sanitizeHtml from 'sanitize-html-react';
-import ToggleContent from './toggleContent';
-import { ExperienceContainer, ExperienceStyle, ExperienceStyleDetails, ExperienceStyleHeader } from '../styles/_components/_experience.style';
-import { SectionTitleStyle, SectionStyle } from '../styles/_components/_sections.style';
+import ToggleContent from './hooks/toggleContent';
+import { Visible } from './hooks/isVisible';
+import { ExperienceContainer, 
+        ExperienceStyle, 
+        ExperienceStyleDetails, 
+        ExperienceStyleHeader } from '../styles/_components/_experience.style';
+import { SectionTitleStyle, 
+        SectionStyle } from '../styles/_components/_sections.style';
 
-const detailText = 'show details +';
 
-
+const detailTextOn = 'show details +';
+const detailTextOff = 'show details _';
 
 const Experience = () => {
     
     const [show, setShow] = useState(false);
     const showHide = () => { setShow(!show) }
+
+    const expRef = useRef();
+    const expVis = Visible(expRef, '0px');
     
     const data = useStaticQuery(graphql`
         query {
@@ -63,17 +71,21 @@ const Experience = () => {
     }
 
     return (
-        <SectionStyle>
-            <SectionTitleStyle>
+        <SectionStyle
+            className={expVis ? "visible" : "not-visible"}
+            ref={expRef}
+        >
+            <SectionTitleStyle
+                className='serif'
+            >
                 <h1>work</h1>
                 <h1>01</h1>
             </SectionTitleStyle>
-            
             <button 
-                className="detail-button"   
+                className="detail-button"
                 onClick={ () => showHide() }
             >
-                {detailText}
+                { show ? detailTextOff : detailTextOn}
             </button>
             
             <ExperienceContainer>
@@ -113,7 +125,9 @@ const Experience = () => {
                                                         </div>
                                                     </div>
 
-                                                    <ToggleContent showState={show}>
+                                                    <ToggleContent 
+                                                        showState={show}
+                                                    >
                                                         {
                                                             <div
                                                                 className={show ? "detail-show" : "detail-noshow"}

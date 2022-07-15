@@ -1,16 +1,20 @@
 import {Link} from 'gatsby';
 import React from 'react';
-import { HeaderStyle, HeaderTitle, HeaderNav } from '../../styles/_layout/_header.style';
-import { colors } from '../../styles/_base/_settingColors.style';
+import { HeaderStyle, HeaderNav } from '../../styles/_layout/_header.style';
 
-const Header = (ref) => {
+const Header = () => {
+    
     return (
         <HeaderStyle>
-            <HeaderTitle>sam h.</HeaderTitle>
-            <HeaderNav>
+            <p className='content'>
+                sam h.
+            </p>
+            <HeaderNav
+                className='content'
+            >
                 <li>
                     <Link 
-                        to="/contact" 
+                        to="mailto:shung93uk@gmail.com" 
                         style={{textDecoration: 'none'}}
                     >
                         contact

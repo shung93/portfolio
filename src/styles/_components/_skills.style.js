@@ -1,10 +1,22 @@
 import styled from "styled-components";
 import { fontSizes, spacing } from "../_base/_settings.style";
 import { colors } from "../_base/_settingColors.style";
+import { FadeInUp } from "../_base/_settingsAnimations.style";
 
 export const SkillStyleInner = styled.div`
     margin-top: ${spacing.small}rem;
-    // text-align: right;
+
+    &.not-visible {
+        opacity: 0;
+    }
+    
+    &.visible {
+        ${FadeInUp({
+            nm:'exp-view-fadein', 
+            duration:1.75, 
+            distance:15,
+        })};
+    }
 `
 
 export const SkillsList = styled.div`
@@ -16,8 +28,9 @@ export const SkillsList = styled.div`
         gap: ${spacing.small}rem;
         margin: 0;
         padding-left: ${spacing.xSmall}rem;
-        font-size: ${fontSizes.small}rem;
-        color: ${colors.lightGray};
+        font-weight: 300;
+        font-size: ${fontSizes.large}rem;
+        color: ${colors.gray};
     }
 
     li {

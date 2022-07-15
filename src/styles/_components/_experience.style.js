@@ -6,7 +6,7 @@ const containerWidth = `${viewWidths.forty}vw`;
 const containerTopMargin = `${spacing.medium}rem`;
 const sectionTopMargin = `${spacing.xSmall}rem`;
 const sectionBottomMargin = `${spacing.xxSmall}rem`;
-const thinBorder = `0.75px solid ${colors.medGray}`;
+const thinBorder = `0.5px solid ${colors.medGray}`;
 const thickBorder = `2px solid ${colors.medGray}`;
 
 export const ExperienceStyle = styled.div`
@@ -35,7 +35,7 @@ export const ExperienceContainer = styled.div`
 
     h3 {
         font-size: ${fontSizes.medium}rem;
-        color: ${colors.lightGray};
+        color: ${colors.gray};
         font-weight: 300;
     }
 

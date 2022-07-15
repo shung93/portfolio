@@ -1,53 +1,52 @@
-import React, {useRef} from 'react';
+import React from "react";
+import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax";
+
 import Experience from '../components/experience';
-import Layout from '../components/layout/layout';
+import Footer from '../components/layout/footer';
+import Header from '../components/layout/header';
 import Skills from '../components/skills';
+import ScrollProgress from "../components/hooks/scrollProgress";
+
 import { SectionContainer } from '../styles/_components/_sections.style';
-import { IntroBgText, 
+import {IntroBgText, 
         IntroStyle, 
-        IntroTitleStyle, 
-        IntroSubStyle } from '../styles/_components/_index.style';
+        IntroDescription} from '../styles/_components/_index.style';
 import { GlobalStyle } from '../styles/_global.style';
-import {Controller, Scene} from 'react-scrollmagic';
+
 
 const IndexPage = () => {
-
+  
   return (
     <>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+      </style>
+      <ScrollProgress/>
       <GlobalStyle/>
-      
-      <Layout>
-        <Controller>
-          <IntroStyle>
-              <IntroBgText>
-                  <h1>united kingdom.<br></br></h1>
-                  <h1>washington.<br></br></h1>
-                  <h1>new york.<br></br></h1>
-              </IntroBgText>
-            
-              <div class="bottom">
-                <IntroTitleStyle>
-                  hihi welcome.
-                </IntroTitleStyle>
-              
-                <IntroSubStyle>
-                  just a data boy, living in a data world.
-                </IntroSubStyle>
-              
-                <IntroSubStyle>
-                  currently based out of the United Kingdom.
-                </IntroSubStyle> 
-              </div>
-          </IntroStyle>
-          
-          <SectionContainer>
-            <Experience/>
-            <Skills/>
-          </SectionContainer>
-        </Controller>
-        
-
-      </Layout>
+      <IntroStyle
+        className="light-mode-accent"
+      >
+        <Header/>
+        <IntroDescription>
+          <h1>hihi welcome.</h1>
+          <p>just a data boy, living in a data world.</p>
+          <p>currently based out of the United Kingdom.</p>
+        </IntroDescription>
+        <IntroBgText
+          className="serif"
+        >
+          <h1>{`new york.`}<br></br></h1>
+          <h1>{`washington.`}<br></br></h1>
+          <h1>{`united kingdom.`}<br></br></h1>
+        </IntroBgText>
+      </IntroStyle>
+      <SectionContainer
+        className="dark-mode-accent"
+      >
+        <Experience/>
+        <Skills/>
+      </SectionContainer>
+      <Footer/>
     </>
   )
 }
