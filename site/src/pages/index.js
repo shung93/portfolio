@@ -11,7 +11,7 @@ import {IntroBgText,
         IntroStyle, 
         IntroDescription} from '../styles/_components/_index.style';
 import { GlobalStyle } from '../styles/_global.style';
-
+import TransitionProgress from "../components/transition";
 
 const IndexPage = () => {
   
@@ -26,11 +26,6 @@ const IndexPage = () => {
         className="light-mode-accent"
       >
         <Header/>
-        <IntroDescription>
-          <h1>hihi welcome.</h1>
-          <p>just a data boy, living in a data world.</p>
-          <p>currently based out of the United Kingdom.</p>
-        </IntroDescription>
         <IntroBgText
           className="serif"
         >
@@ -38,7 +33,13 @@ const IndexPage = () => {
           <h1>{`washington.`}<br></br></h1>
           <h1>{`united kingdom.`}<br></br></h1>
         </IntroBgText>
+        <IntroDescription>
+          <h1>hihi welcome.</h1>
+          <p>just a data boy, living in a data world.</p>
+          <p>currently based out of the United Kingdom.</p>
+        </IntroDescription>
       </IntroStyle>
+      <TransitionProgress/>
       <SectionContainer
         className="dark-mode-accent"
       >

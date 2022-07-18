@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
         color: ${colors.lightBlack};
+        background: ${colors.lightLavendar};
         
         width: 100%;
         height: 100%;

@@ -39,6 +39,14 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/smh.png`,
       }
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images\/.*\.svg/
+        }
+      }
     }
   ]
 };

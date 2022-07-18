@@ -8,7 +8,7 @@ export const IntroStyle = styled.div`
     display: flex;
     flex-direction: column;
     padding: ${spacing.none}rem ${spacing.medium}rem ${spacing.none}rem ${spacing.medium}rem;
-    height: calc(${100}vh);
+    height: calc(${90}vh);
     position: relative;
 `;
 
@@ -43,7 +43,7 @@ export const IntroBgText = styled.div`
 export const IntroDescription = styled.div`
     position: absolute;
     bottom: 0;
-    margin-bottom: ${spacing.xxLarge}rem;
+    padding-bottom: ${spacing.small}rem;
 
     ${FadeInUp({
         nm:'intro-text-fadein', 

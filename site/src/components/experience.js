@@ -10,7 +10,6 @@ import { ExperienceContainer,
 import { SectionTitleStyle, 
         SectionStyle } from '../styles/_components/_sections.style';
 
-
 const detailTextOn = 'show details +';
 const detailTextOff = 'show details _';
 

@@ -9,8 +9,6 @@ const ScrollProgress = () => {
         const windowScroll = document.body.scrollTop;
         const height = document.body.scrollHeight - document.body.clientHeight;
         const scrolled = (windowScroll / height) * 100
-        // console.log(window.getComputedStyle(e.target, null))
-        console.log(e.target)
         setProgressStatus(scrolled);
     };
 
