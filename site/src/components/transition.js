@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import DownIcon from '../images/icons/downicon.svg'
 import { TransitionContainer, TransitionStyle } from "../styles/_components/_transition.style";
-import { spacing } from "../styles/_base/_settings.style";
 import { colors } from "../styles/_base/_settingColors.style";
+import { spacing } from "../styles/_base/_settings.style";
+
 
 const TransitionProgress = () => {
     const [progressStatus, setProgressStatus] = useState(0);
@@ -18,9 +19,9 @@ const TransitionProgress = () => {
         document.addEventListener("scroll", updateProgress, true);
     }, [ ]);
 
-    const radius =  Math.floor(50 - (progressStatus ** 2.5));
-    const containerHeightCalc = spacing.xxLarge + ((spacing.xxLarge + progressStatus)/4);
-    const containerHeight = containerHeightCalc > 30 ? 30 : containerHeightCalc;
+    const radius =  Math.floor(50 - (progressStatus ** 1.1));
+    const containerHeightCalc = (spacing.xxLarge * 2) + (progressStatus ** 3);
+    const containerHeight = containerHeightCalc > 35 ? 35 : containerHeightCalc;
 
     return (
         <div
@@ -29,27 +30,27 @@ const TransitionProgress = () => {
                 justifyContent: 'center',
             }}
         >
-            <TransitionContainer
+        <TransitionContainer
+            style={{
+                height: `${containerHeight}rem`,
+            }}
+        >
+            <TransitionStyle
                 style={{
-                    height: `${containerHeight}rem`,
+                    height: `calc(60vh + ${progressStatus * 3}vh)`,
+                    width: `calc(60vh + ${progressStatus ** 2}vw)`,
+                    borderRadius: `${50}% / ${radius < 0 ? 0 : radius}%`,
+                    maxHeight: `100vh`,
                 }}
             >
-                <TransitionStyle
+                <DownIcon
+                    stroke={colors.lightLavendar}
                     style={{
-                        height: `calc(60vh + ${progressStatus * 2}vh)`,
-                        width: `calc(60vw + ${progressStatus ** 4}vw)`,
-                        borderRadius: `${50}% / ${radius < 0 ? 0 : radius}%`,
-                        maxHeight: `100vh`,
+                        marginTop: `${spacing.medium}rem`,
                     }}
-                >
-                    <DownIcon
-                        stroke={colors.lightLavendar}
-                        style={{
-                            marginTop: `${spacing.medium}rem`,
-                        }}
-                    />
-                </TransitionStyle>
-            </TransitionContainer>
+                />
+            </TransitionStyle>
+        </TransitionContainer>
         </div>
     )
 };

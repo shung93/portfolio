@@ -1,3 +1,5 @@
+import { colors } from "./_settingColors.style";
+
 export const fontSizes = {
     xxSmall: 0.8,
     xSmall: 0.9,
@@ -10,6 +12,8 @@ export const fontSizes = {
 };
 
 export const headingFontSizes = {
+    xxSmall: 2.0,
+    xSmall: 3.0,
     small: 5.0,
     medium: 7.0,
     large: 10.0,
@@ -31,4 +35,10 @@ export const spacing = {
 export const viewWidths = {
     forty: 40.0,
     fifty: 50.0,
+}
+
+export const grayBorders = {
+    thin: `0.5px solid ${colors.medGray}`,
+    thick: `1.5px solid ${colors.medGray}`,
+    thickest: `2.5px solid ${colors.lightGray}`,
 }

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../_base/_settingColors.style";
 import { fontSizes, headingFontSizes, spacing } from "../_base/_settings.style";
-import { mediaSizes } from "../_base/_settingsMedia.style";
 import { FadeInUp } from "../_base/_settingsAnimations.style";
 
 export const IntroStyle = styled.div`
@@ -30,14 +29,6 @@ export const IntroBgText = styled.div`
         pointer-events: none;
         text-align: right;
     }
-    // @media screen and (min-width: ${mediaSizes.desktop}) {
-    //     font-size: calc(${headingFontSizes.xLarge}vw + 0.5em);
-    // };
-    // @media screen and (min-width: ${mediaSizes.phone}) {
-    //     h1 {
-    //         font-size: calc(${headingFontSizes.large}vw + 0.5em);
-    //     }
-    // };
 `
 
 export const IntroDescription = styled.div`
@@ -58,10 +49,6 @@ export const IntroDescription = styled.div`
         line-height: 90%;
         font-weight: 300;
         font-size: ${headingFontSizes.small}rem;
-
-        @media screen and (min-width: ${mediaSizes.desktop}) {
-            font-size: ${headingFontSizes.medium}rem;
-        }
     }
 
     p {

@@ -14,6 +14,9 @@ const Skills = () => {
     const skillsRefArray = [skillsRef1, skillsRef2]
     const skillsVisArray = [skillsVis1, skillsVis2]
     
+    const txtLength = (str) => {
+        return str.length > 7 ? 'longTxt' : 'shortTxt'
+    };
 
     const data = useStaticQuery(graphql`
         query {
@@ -42,9 +45,13 @@ const Skills = () => {
                             >
                                 <SkillStyleInner>
                                     <SectionTitleStyle
-                                        className='serif'
+                                        className={`serif`}
                                     >
-                                        <h1>{edge.node.skillType.toLowerCase()}</h1>
+                                        <h1
+                                            className={txtLength(edge.node.skillType)}
+                                        >
+                                            {edge.node.skillType.toLowerCase()}
+                                        </h1>
                                         <h1>{idx}</h1>
                                     </SectionTitleStyle>
                                     <SkillsList>

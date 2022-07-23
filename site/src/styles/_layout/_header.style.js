@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { fontSizes, spacing } from "../_base/_settings.style";
 import { colors } from "../_base/_settingColors.style";
+import { fontSizes, spacing } from "../_base/_settings.style";
 import { FadeInUp, FadeIn } from "../_base/_settingsAnimations.style";
 
 

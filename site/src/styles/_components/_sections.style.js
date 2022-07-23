@@ -1,7 +1,9 @@
 import styled from "styled-components";
-import { headingFontSizes, spacing } from "../_base/_settings.style";
 import { colors } from "../_base/_settingColors.style";
+import { fontSizes, headingFontSizes, spacing } from "../_base/_settings.style";
 import { FadeInUp } from "../_base/_settingsAnimations.style";
+import { grayBorders } from "../_base/_settings.style";
+import { mediaSizes } from "../_base/_settingsMedia.style";
 
 export const SectionContainer = styled.div`
     display: flex;
@@ -13,9 +15,10 @@ export const SectionContainer = styled.div`
 
 export const SectionTitleStyle = styled.div`
     display: flex;
+    align-items: bottom;
     justify-content: space-between;
     width: auto;
-    border-bottom: 3px solid ${colors.lightGray};
+    border-bottom: ${grayBorders.thickest};
     
     h1 {
         margin: 0;
@@ -23,6 +26,16 @@ export const SectionTitleStyle = styled.div`
         color: ${colors.gray};
         font-weight: 400;
         line-height: 90%;
+
+        @media only screen and (max-width: ${mediaSizes.phone}) {
+            &.longTxt {
+                font-size: ${headingFontSizes.small}rem;
+                line-height: ${headingFontSizes.medium}rem;
+                margin-bottom: -${spacing.small}rem;
+            }
+
+            font-size: ${headingFontSizes.medium}rem;
+        }
     }
 `
 export const SectionStyle = styled.div`
@@ -45,6 +58,7 @@ export const SectionStyle = styled.div`
     .detail-button {
         margin-top: ${spacing.xSmall}rem;
         padding: 0;
+        font-size: ${fontSizes.small}rem;
         background: transparent;
         border: 1px solid transparent;
         color: ${colors.gray};

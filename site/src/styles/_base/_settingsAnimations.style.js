@@ -39,7 +39,9 @@ export const FadeIn = ({nm, duration}) => {
 };
 
 
-export const FadeInUp = ({nm, duration, distance}) => {
+export const FadeInUp = ({nm, duration, distance, fadeOut=0}) => {
+    const startOpacity = fadeOut ? 1 : 0;
+    const endOpacity = fadeOut ? 0 : 1;
 
     return (
         `   
@@ -66,11 +68,11 @@ export const FadeInUp = ({nm, duration, distance}) => {
             @keyframes ${nm} {
                 from {
                     transform: translate3d(0,${distance}px,0);
-                    opacity: 0;
+                    opacity: ${startOpacity};
                 }
                 to {
                     transform: translate3d(0,0,0);
-                    opacity: 1;
+                    opacity: ${endOpacity};
                 }
             }
         
@@ -78,21 +80,21 @@ export const FadeInUp = ({nm, duration, distance}) => {
             @-moz-keyframes ${nm} {
                 from {
                     transform: translate3d(0,${distance}px,0);
-                    opacity: 0;
+                    opacity: ${startOpacity};
                 }
                 to {
                     transform: translate3d(0,0,0);
-                    opacity: 1;
+                    opacity: ${endOpacity};
                 }
             }
 
             @-webkit-keyframes {
                 from {
                     transform: translate3d(0,${distance}px,0);
-                    opacity: 0;
+                    opacity: ${startOpacity};
                 }
                 to {
-                    opacity: 1;
+                    opacity: ${endOpacity};
                     transform: translate3d(0,0,0);
                 }
             }
@@ -100,22 +102,22 @@ export const FadeInUp = ({nm, duration, distance}) => {
             @-o-keyframes ${nm} {
                 from {
                     transform: translate3d(0,${distance}px,0);
-                    opacity: 0;
+                    opacity: ${startOpacity};
                 }
                 to {
                     transform: translate3d(0,0,0);
-                    opacity: 1;
+                    opacity: ${endOpacity};
                 }
             }
 
             @-ms-keyframes ${nm} {
                 from {
                     transform: translate3d(0,${distance}px,0);
-                    opacity: 0;
+                    opacity: ${startOpacity};
                 }
                 to {
                     transform: translate3d(0,0,0);
-                    opacity: 1;
+                    opacity: ${endOpacity};
                 }
             }
         `
