@@ -47,6 +47,14 @@ module.exports = {
           include: /images\/.*\.svg/
         }
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+          bucketName: 'cdkstaticwebsitestack-websitebucket75c24d94-q3z1dnm4ng6f',
+          bucketPrefix: 'production/public',
+          acl: null,
+      },
+  },
   ]
 };
