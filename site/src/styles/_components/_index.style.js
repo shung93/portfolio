@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { colors } from "../_base/_settingColors.style";
 import { fontSizes, headingFontSizes, spacing } from "../_base/_settings.style";
 import { FadeInUp } from "../_base/_settingsAnimations.style";
+import { mediaSizes } from "../_base/_settingsMedia.style";
 
 export const IntroStyle = styled.div`
     display: flex;
@@ -13,6 +14,12 @@ export const IntroStyle = styled.div`
 
 export const IntroBgText = styled.div`
     width: 100%;
+
+    @media only screen and (max-width: ${mediaSizes.phone}) {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: ${spacing.small}rem;
+    }
 
     ${FadeInUp({
         nm:'intro-text-fadein', 
@@ -35,6 +42,12 @@ export const IntroDescription = styled.div`
     position: absolute;
     bottom: 0;
     padding-bottom: ${spacing.small}rem;
+
+    @media only screen and (max-width: ${mediaSizes.phone}) {
+        margin-top: ${spacing.large}rem;
+        position: static;
+        bottom: auto;
+    }
 
     ${FadeInUp({
         nm:'intro-text-fadein', 

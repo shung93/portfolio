@@ -5,12 +5,10 @@ import { colors } from "../_base/_settingColors.style";
 import { mediaSizes } from "../_base/_settingsMedia.style";
 import { grayBorders } from "../_base/_settings.style";
 
-const containerWidth = `${viewWidths.forty * 1.25}`;
-const containerTopMargin = `${spacing.medium}rem`;
+const containerTopMargin = `${spacing.small}rem`;
 const sectionTopMargin = `${spacing.xSmall}rem`;
 const sectionBottomMargin = `${spacing.xxSmall}rem`;
 const thinBorder = `${grayBorders.thin}`;
-const thickBorder = `${grayBorders.thick}`;
 
 export const ExperienceStyle = styled.div`
     margin-top: ${containerTopMargin};
@@ -23,11 +21,7 @@ export const ExperienceStyle = styled.div`
 export const ExperienceContainer = styled.div`
     border-bottom: ${thinBorder};
     margin-top: ${containerTopMargin};
-    width: ${containerWidth}vw;
-
-    @media only screen and (max-width: ${mediaSizes.phone}) {
-        width: ${containerWidth * 1.75}vw;
-    }
+    width:  ${viewWidths.forty * 1.65}vw;
 
     h1 {
         font-weight: 300;
@@ -61,6 +55,7 @@ export const ExperienceContainer = styled.div`
 
     li {
         list-style: none;
+        margin-bottom: ${spacing.xSmall}rem;
     }
 
     li:before {
@@ -71,10 +66,10 @@ export const ExperienceContainer = styled.div`
 `
 
 export const ExperienceStyleHeader = styled.div`
-    margin-bottom: ${spacing.xLarge}rem;
+    padding-bottom: ${spacing.medium}rem;
     display: flex;
     flex-direction: column;
-    border-top: ${thickBorder};
+    border-top: ${thinBorder};
 
     h1 {
         margin-top: ${sectionTopMargin};
@@ -87,8 +82,7 @@ export const ExperienceStyleHeader = styled.div`
 
 export const ExperienceStyleDetails = styled.div`
     margin-top: 0;
-    border-bottom: ${spacing.large}rem solid rgba(255,255,255,0);
-    border-top: ${thinBorder};
+    padding-bottom: ${spacing.small}rem;
 
     h3 {
         margin-top: ${sectionTopMargin};

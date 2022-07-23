@@ -38,7 +38,6 @@ export const SkillsList = styled.div`
     ul {
         display: flex;
         flex-direction: column;
-        gap: ${spacing.small}rem;
         margin: 0;
         padding-left: ${spacing.xSmall}rem;
         font-weight: 300;
@@ -48,5 +47,6 @@ export const SkillsList = styled.div`
 
     li {
         list-style: none;
+        margin-bottom: ${spacing.large}rem;
     }
 `

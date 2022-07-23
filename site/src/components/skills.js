@@ -36,7 +36,7 @@ const Skills = () => {
             {
                 data.allContentfulPortfolioSkills.edges.map(
                     (edge, index) => {
-                        const idx = (index + 2).toString().padStart(2, '0');
+                        const idx = (index + 3).toString().padStart(2, '0');
 
                         return (
                             <SectionStyle

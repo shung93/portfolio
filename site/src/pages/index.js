@@ -1,5 +1,5 @@
 import React from "react";
-
+import Education from "../components/education";
 import Experience from '../components/experience';
 import Footer from '../components/layout/footer';
 import Header from '../components/layout/header';
@@ -26,6 +26,11 @@ const IndexPage = () => {
         className="light-mode-accent"
       >
         <Header/>
+        <IntroDescription>
+          <h1>hihi welcome.</h1>
+          <p>just a data boy, living in a data world.</p>
+          <p>currently based out of the United Kingdom.</p>
+        </IntroDescription>
         <IntroBgText
           className="serif"
         >
@@ -33,17 +38,13 @@ const IndexPage = () => {
           <h1>{`washington.`}<br></br></h1>
           <h1>{`united kingdom.`}<br></br></h1>
         </IntroBgText>
-        <IntroDescription>
-          <h1>hihi welcome.</h1>
-          <p>just a data boy, living in a data world.</p>
-          <p>currently based out of the United Kingdom.</p>
-        </IntroDescription>
       </IntroStyle>
       <TransitionProgress/>
       <SectionContainer
         className="dark-mode-accent"
       >
         <Experience/>
+        <Education/>
         <Skills/>
       </SectionContainer>
       <Footer/>
