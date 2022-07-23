@@ -18,30 +18,39 @@ const TransitionProgress = () => {
         document.addEventListener("scroll", updateProgress, true);
     }, [ ]);
 
-    const radius =  Math.floor(50 - (progressStatus ** 2.5))
-    const containerHeight = spacing.xxLarge + ((spacing.xxLarge + progressStatus)/5)
+    const radius =  Math.floor(50 - (progressStatus ** 2.5));
+    const containerHeightCalc = spacing.xxLarge + ((spacing.xxLarge + progressStatus)/4);
+    const containerHeight = containerHeightCalc > 30 ? 30 : containerHeightCalc;
 
     return (
-        <TransitionContainer
+        <div
             style={{
-                height: `${containerHeight}rem`,
+                display: 'flex',
+                justifyContent: 'center',
             }}
         >
-            <TransitionStyle
+            <TransitionContainer
                 style={{
-                    height: `calc(60vh + ${progressStatus * 2}vh)`,
-                    width: `calc(60vw + ${progressStatus ** 4}vw)`,
-                    borderRadius: `${50}% / ${radius < 0 ? 0 : radius}%`//`${radius < 0 ? 0 : radius}%`,
+                    height: `${containerHeight}rem`,
                 }}
             >
-                <DownIcon
-                    stroke={colors.lightLavendar}
+                <TransitionStyle
                     style={{
-                        marginTop: `${spacing.medium}rem`,
+                        height: `calc(60vh + ${progressStatus * 2}vh)`,
+                        width: `calc(60vw + ${progressStatus ** 4}vw)`,
+                        borderRadius: `${50}% / ${radius < 0 ? 0 : radius}%`,
+                        maxHeight: `100vh`,
                     }}
-                />
-            </TransitionStyle>
-        </TransitionContainer>
+                >
+                    <DownIcon
+                        stroke={colors.lightLavendar}
+                        style={{
+                            marginTop: `${spacing.medium}rem`,
+                        }}
+                    />
+                </TransitionStyle>
+            </TransitionContainer>
+        </div>
     )
 };
 

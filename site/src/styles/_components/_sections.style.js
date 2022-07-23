@@ -6,7 +6,7 @@ import { FadeInUp } from "../_base/_settingsAnimations.style";
 export const SectionContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding-top: ${spacing.large}rem;
+    padding-top: ${spacing.xxLarge}rem;
     padding-bottom: ${spacing.xxLarge}rem;
     background: ${colors.medBlack};
 `
@@ -38,7 +38,7 @@ export const SectionStyle = styled.div`
         ${FadeInUp({
             nm:'exp-view-fadein', 
             duration:1.75, 
-            distance:15,
+            distance:5,
         })};
     }
         
