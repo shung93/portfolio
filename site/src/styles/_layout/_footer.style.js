@@ -4,13 +4,20 @@ import { colors } from "../_base/_settingColors.style";
 
 export const FooterStyle = styled.div`
     padding: ${spacing.none}rem ${spacing.medium}rem ${spacing.none}rem ${spacing.medium}rem;
+    align-items: center;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     background: ${colors.medBlack};
-    color: ${colors.gray};
+    color: ${colors.medLavendar};
+    font-size: ${fontSizes.xxSmall}rem;
 
-    p {
-        font-size: ${fontSizes.xxSmall}rem;
-        line-height: 0;
+    a {
+        color: ${colors.medLavendar};
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        gap: ${spacing.medium}rem;
     }
 `;

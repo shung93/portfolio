@@ -24,7 +24,7 @@ export const IntroBgText = styled.div`
     ${FadeInUp({
         nm:'intro-text-fadein', 
         duration:1, 
-        distance:15,
+        distance:25,
     })};
 
     h1 {
@@ -52,7 +52,7 @@ export const IntroDescription = styled.div`
     ${FadeInUp({
         nm:'intro-text-fadein', 
         duration:1, 
-        distance:15,
+        distance:25,
     })};
 
     h1 {

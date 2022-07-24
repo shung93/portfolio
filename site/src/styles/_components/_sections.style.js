@@ -51,7 +51,7 @@ export const SectionStyle = styled.div`
         ${FadeInUp({
             nm:'exp-view-fadein', 
             duration:1.75, 
-            distance:5,
+            distance:30,
         })};
     }
         

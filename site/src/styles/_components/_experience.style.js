@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { FadeInUp } from "../_base/_settingsAnimations.style";
 import { fontSizes, spacing, viewWidths } from "../_base/_settings.style";
 import { colors } from "../_base/_settingColors.style";
-import { mediaSizes } from "../_base/_settingsMedia.style";
 import { grayBorders } from "../_base/_settings.style";
 
 const containerTopMargin = `${spacing.small}rem`;
@@ -48,7 +47,7 @@ export const ExperienceContainer = styled.div`
 
     ul {
         margin-top: ${sectionTopMargin};
-        font-size: ${fontSizes.xxSmall}rem;
+        font-size: ${fontSizes.xSmall}rem;
         padding-left: ${spacing.xSmall}rem;
         color: ${colors.lightGray};
     }
@@ -109,7 +108,7 @@ export const ExperienceStyleDetails = styled.div`
         ${FadeInUp({
             nm:'detail-text-show', 
             duration:0.6, 
-            distance:10,
+            distance:15,
         })};
     }
 

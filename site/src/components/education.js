@@ -1,5 +1,5 @@
 import {graphql, useStaticQuery} from 'gatsby';
-import React, {useState, useRef} from 'react';
+import React, { useRef } from 'react';
 import { Visible } from './hooks/isVisible';
 import { ExperienceContainer, 
         ExperienceStyle, 
@@ -9,9 +9,6 @@ import { SectionTitleStyle,
         SectionStyle } from '../styles/_components/_sections.style';
 
 const Education = () => {
-    
-    const [show, setShow] = useState(false);
-    const showHide = () => { setShow(!show) }
 
     const expRef = useRef();
     const expVis = Visible(expRef, '0px');
@@ -54,16 +51,6 @@ const Education = () => {
             }
         }
     `);
-    
-    const getMonthDate = (date, format) => {
-        const newDate = new Date(date);
-
-        if (format === 'year') {
-            return newDate.toLocaleString('default', {year: 'numeric'});
-        } else if (format === 'month') {
-            return newDate.toLocaleString('default', {month: 'short'});
-        }
-    }
 
     return (
         <SectionStyle

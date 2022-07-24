@@ -1,8 +1,14 @@
+import "@fontsource/montserrat";
+import "@fontsource/ibarra-real-nova";
+
 import { createGlobalStyle } from "styled-components";
 import { colors } from "./_base/_settingColors.style";
 import { mediaSizes } from "./_base/_settingsMedia.style";
 
 export const GlobalStyle = createGlobalStyle`
+    ::-webkit-scrollbar { 
+        display: none;
+    }
 
     html, body {
         -ms-text-size-adjust: 100%;
@@ -16,7 +22,6 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
 
         overflow-x: hidden;
-        -ms-overflow-style: none;
         scrollbar-width: none;
     }
 
@@ -48,15 +53,35 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Ibarra Real Nova', serif;
     }
 
-    ::-webkit-scrollbar { 
-        display: none;
-    }
-
-    .light-mode-accent {
-        background: ${colors.lightLavendar};
+    .links {
+        a {
+            text-decoration: none;
+        }
     }
 
     .dark-mode {
         background: ${colors.medBlack};
+
+        a:hover {
+            color: ${colors.lightBlack};
+        }
     }
+
+    .light-mode {
+        background: ${colors.lightLavendar};
+
+        a:hover {
+            color: ${colors.medGray};
+        }
+    }
+
+    .noselect {
+        -webkit-touch-callout: none; /* iOS Safari */
+          -webkit-user-select: none; /* Safari */
+           -khtml-user-select: none; /* Konqueror HTML */
+             -moz-user-select: none; /* Old versions of Firefox */
+              -ms-user-select: none; /* Internet Explorer/Edge */
+                  user-select: none; /* Non-prefixed version, currently
+                                        supported by Chrome, Edge, Opera and Firefox */
+      }
 `

@@ -8,7 +8,7 @@ export const TransitionContainer = styled.div`
     justify-content: center;
     margin-top: ${spacing.medium}rem;
     width: 150%;
-    background: linear-gradient(to bottom, ${colors.lightLavendar} 50%, ${colors.medBlack} 0%); 
+    background: linear-gradient(to bottom, ${colors.lightLavendar} 70%, ${colors.medBlack} 0%); 
     // background: ${colors.lightLavendar};
     z-index: 0;
 

@@ -1,11 +1,12 @@
+import { Helmet } from "react-helmet";
 import React from "react";
+
 import Education from "../components/education";
 import Experience from '../components/experience';
 import Footer from '../components/layout/footer';
 import Header from '../components/layout/header';
 import Skills from '../components/skills';
 import ScrollProgress from "../components/hooks/scrollProgress";
-
 import { SectionContainer } from '../styles/_components/_sections.style';
 import {IntroBgText, 
         IntroStyle, 
@@ -17,13 +18,13 @@ const IndexPage = () => {
   
   return (
     <>
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-      </style>
+      <Helmet 
+        title="sam-h | portfolio" 
+      />
       <ScrollProgress/>
       <GlobalStyle/>
       <IntroStyle
-        className="light-mode-accent"
+        className="light-mode"
       >
         <Header/>
         <IntroDescription>
@@ -41,13 +42,14 @@ const IndexPage = () => {
       </IntroStyle>
       <TransitionProgress/>
       <SectionContainer
-        className="dark-mode-accent"
+        className="dark-mode"
       >
         <Experience/>
         <Education/>
         <Skills/>
       </SectionContainer>
-      <Footer/>
+      <Footer
+      />
     </>
   )
 }

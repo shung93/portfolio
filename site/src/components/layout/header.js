@@ -7,15 +7,14 @@ const Header = () => {
     return (
         <HeaderStyle>
             <p className='content'>
-                sam h.
+                sam
             </p>
             <HeaderNav
-                className='content'
+                className='content links'
             >
                 <li>
                     <Link 
                         to="mailto:shung93uk@gmail.com" 
-                        style={{textDecoration: 'none'}}
                     >
                         contact
                     </Link>

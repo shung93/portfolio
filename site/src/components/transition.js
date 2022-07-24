@@ -37,8 +37,8 @@ const TransitionProgress = () => {
         >
             <TransitionStyle
                 style={{
-                    height: `calc(60vh + ${progressStatus ** 3}vh)`,
-                    width: `calc(60vh + ${progressStatus ** 3}vw)`,
+                    height: `calc(60vh + ${progressStatus ** 2}vh)`,
+                    width: `calc(60vh + ${progressStatus ** 2}vw)`,
                     borderRadius: `${50}% / ${radius < 0 ? 0 : radius}%`,
                     maxHeight: `100vh`,
                 }}

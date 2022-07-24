@@ -17,11 +17,14 @@
     "deploy": "gatsby-plugin-s3 deploy"
   },
   "dependencies": {
+    "@fontsource/ibarra-real-nova": "^4.5.8",
+    "@fontsource/montserrat": "^4.5.11",
     "@react-spring/parallax": "^9.4.5",
     "babel-plugin-styled-components": "^2.0.7",
     "dotenv": "^16.0.1",
     "gatsby": "^4.13.1",
     "gatsby-plugin-google-analytics": "^4.13.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^2.13.0",
     "gatsby-plugin-manifest": "^4.18.1",
     "gatsby-plugin-react-helmet": "^5.13.0",
@@ -29,6 +32,7 @@
     "gatsby-plugin-s3": "^0.3.8",
     "gatsby-plugin-sharp": "^4.13.0",
     "gatsby-plugin-styled-components": "^5.14.0",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-contentful": "^7.11.0",
     "gatsby-source-filesystem": "^4.13.0",
     "gatsby-transformer-remark": "^5.13.0",

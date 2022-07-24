@@ -3,7 +3,7 @@ require('dotenv').config({ path: path.resolve(__dirname, `../.env.${process.env.
 
 module.exports = {
   siteMetadata: {
-    title: `Portfolio Website`,
+    title: `sam's portfolio`,
     siteUrl: `https://www.sam-h.dev`
   },
   plugins: [
@@ -55,6 +55,6 @@ module.exports = {
           bucketPrefix: 'production/public',
           acl: null,
       },
-  },
+    }
   ]
 };

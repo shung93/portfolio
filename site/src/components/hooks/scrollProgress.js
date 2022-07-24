@@ -25,7 +25,7 @@ const ScrollProgress = () => {
                     className="progress-main"
                     style={{
                         height: `${progressStatus}vh`, 
-                        maxHeight: `calc(100vh - ${spacing.xSmall}rem * 2)`,
+                        maxHeight: `calc(100vh - ${spacing.small}rem * 2)`,
                     }}
                 />
             </ProgressWrapper>
