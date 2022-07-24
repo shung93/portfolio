@@ -73,7 +73,7 @@ const Experience = () => {
             ref={expRef}
         >
             <SectionTitleStyle
-                className='serif'
+                className='serif no-select'
             >
                 <h1>work</h1>
                 <h1>01</h1>
@@ -85,7 +85,9 @@ const Experience = () => {
                 { show ? detailTextOff : detailTextOn}
             </button>
             
-            <ExperienceContainer>
+            <ExperienceContainer
+                className='no-select'
+            >
             {
                 data.allContentfulPortfolioCompanyName.edges.map(
                     (edge) => {

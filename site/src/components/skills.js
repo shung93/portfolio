@@ -32,7 +32,9 @@ const Skills = () => {
     `);
 
     return (
-        <>
+        <div
+            className='no-select'
+        >
             {
                 data.allContentfulPortfolioSkills.edges.map(
                     (edge, index) => {
@@ -65,7 +67,7 @@ const Skills = () => {
                     }
                 )
             }
-        </>
+        </div>
     )
 };
 

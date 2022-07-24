@@ -54,7 +54,7 @@ const Education = () => {
 
     return (
         <SectionStyle
-            className={expVis ? "visible" : "not-visible"}
+            className={"no-select " + (expVis ? "visible" : "not-visible")}
             ref={expRef}
         >
             <SectionTitleStyle

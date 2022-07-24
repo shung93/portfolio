@@ -27,13 +27,15 @@ const IndexPage = () => {
         className="light-mode"
       >
         <Header/>
-        <IntroDescription>
+        <IntroDescription
+          className="no-select"
+        >
           <h1>hihi welcome.</h1>
           <p>just a data boy, living in a data world.</p>
           <p>currently based out of the United Kingdom.</p>
         </IntroDescription>
         <IntroBgText
-          className="serif"
+          className="serif no-select"
         >
           <h1>{`new york.`}<br></br></h1>
           <h1>{`washington.`}<br></br></h1>
