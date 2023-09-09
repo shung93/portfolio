@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-const IndexPage = () => {
-    return (
-        <>
-            <div>
-                <h1>Contact Page</h1>
-            </div>
-        </>
-    )
+const ContactPage = () => {
+  return (
+    <>
+      <div>
+        <h1>Contact Page</h1>
+      </div>
+    </>
+  );
 };
 
-export default IndexPage;
+export default ContactPage;
