@@ -1,5 +1,5 @@
-import { Link } from "gatsby";
 import React from "react";
+import { Link } from "gatsby";
 import { FooterStyle } from "../../styles/_layout/_footer.style";
 
 const Footer = () => {
