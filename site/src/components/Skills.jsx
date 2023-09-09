@@ -8,14 +8,14 @@ import {
   SectionTitleStyle,
   SectionStyle,
 } from "../styles/_components/_sections.style";
-import { Visible } from "./hooks/isVisible";
+import { useVisibility } from "./hooks/useVisibility";
 
 const Skills = () => {
   const skillsRef1 = useRef();
-  const skillsVis1 = Visible(skillsRef1);
+  const skillsVis1 = useVisibility(skillsRef1);
 
   const skillsRef2 = useRef();
-  const skillsVis2 = Visible(skillsRef2);
+  const skillsVis2 = useVisibility(skillsRef2);
 
   const skillsRefArray = [skillsRef1, skillsRef2];
   const skillsVisArray = [skillsVis1, skillsVis2];

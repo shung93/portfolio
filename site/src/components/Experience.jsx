@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import React, { useState, useRef } from "react";
 import sanitizeHtml from "sanitize-html-react";
 import ToggleContent from "./hooks/toggleContent";
-import { Visible } from "./hooks/isVisible";
+import { useVisibility } from "./hooks/useVisibility";
 import {
   ExperienceContainer,
   ExperienceStyle,
@@ -24,7 +24,7 @@ const Experience = () => {
   };
 
   const expRef = useRef();
-  const expVis = Visible(expRef, "0px");
+  const expVis = useVisibility(expRef, "0px");
 
   const data = useStaticQuery(graphql`
     query {

@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React, { useRef } from "react";
-import { Visible } from "./hooks/isVisible";
+import { useVisibility } from "./hooks/useVisibility";
 import {
   ExperienceContainer,
   ExperienceStyle,
@@ -14,7 +14,7 @@ import {
 
 const Education = () => {
   const expRef = useRef();
-  const expVis = Visible(expRef, "0px");
+  const expVis = useVisibility(expRef, "0px");
 
   const txtLength = (str) => {
     return str.length > 7 ? "longTxt" : "shortTxt";
