@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React, { useState, useRef } from "react";
 import sanitizeHtml from "sanitize-html-react";
-import ToggleContent from "./hooks/toggleContent";
+import ToggleContent from "./ToggleContent";
 import { useVisibility } from "./hooks/useVisibility";
 import {
   ExperienceContainer,
