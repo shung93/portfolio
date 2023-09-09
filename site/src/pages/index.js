@@ -6,7 +6,7 @@ import Experience from "../components/Experience";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Footer";
 import Skills from "../components/Skills";
-import ScrollProgress from "../components/hooks/scrollProgress";
+import ScrollProgress from "../components/ScrollProgress";
 import { SectionContainer } from "../styles/_components/_sections.style";
 import {
   IntroBgText,
